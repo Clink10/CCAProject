@@ -20,8 +20,14 @@ import java.util.List;
  */
 public class Stockage {
     
+    /**
+     * Get the data to generate the game from a json file
+     * @return List of Place that conatains all the data
+     */
     public List<Place> getDataGame() {
         
+        //Défini les sous-types de Character pour pouvoir récupérer tout d'un coup 
+        //dans le json
         RuntimeTypeAdapterFactory<Character> runtimeTypeAdapterFactory;
         runtimeTypeAdapterFactory = RuntimeTypeAdapterFactory
                 .of(Character.class, "type")

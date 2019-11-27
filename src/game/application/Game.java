@@ -16,20 +16,14 @@ public class Game {
     public Game() {
     }
     
+    /**
+     * Recup the data and initialize the differents components.
+     */
     public void initializeGame() {
         Stockage s = new Stockage();
         this.places = s.getDataGame();
         this.hero = new Hero("hero", 100);
         this.currentHeroPlace = this.places.get(0);
-    }
-
-    /**
-     * 
-     * @param c
-     */
-    public void choseOperation(Command c) {
-        // TODO - implement Game.choseOperation
-        throw new UnsupportedOperationException();
     }
 
     /**
@@ -96,11 +90,6 @@ public class Game {
      */
     private boolean existsPlace(String s) {
             // TODO - implement Game.existsPlace
-            throw new UnsupportedOperationException();
-    }
-
-    public void quit() {
-            // TODO - implement Game.quit
             throw new UnsupportedOperationException();
     }
 
