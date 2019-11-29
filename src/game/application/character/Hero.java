@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game.application;
+package game.application.character;
+
+import game.application.Usable;
 
 /**
  *
@@ -20,5 +22,5 @@ public class Hero extends Character {
     public String toString() {
         return super.toString() + this.location;
     }
-    
+
 }

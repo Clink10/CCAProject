@@ -1,5 +1,10 @@
 package game.application;
 
+import game.application.items.Item;
+import game.application.places.Place;
+import game.application.places.Exit;
+import game.application.character.Hero;
+import game.application.character.Character;
 import game.application.exceptions.NonExistantPlaceException;
 import game.application.exceptions.LockedExitException;
 import game.application.exceptions.NonExistantLookableException;
@@ -65,7 +70,14 @@ public class Game {
         return placeOut;
     }
     
-    public Lookable look(String s) throws NonLookableException, NonExistantLookableException {
+    /**
+     *
+     * @param s
+     * @return 
+     * @throws game.application.exceptions.NonLookableException 
+     * @throws game.application.exceptions.NonExistantLookableException 
+     */
+    public Lookable lookInPlace(String s) throws NonLookableException, NonExistantLookableException {
         Lookable l;
         Item i = this.getHeroPlace().getItemByName(s);
         
@@ -83,6 +95,17 @@ public class Game {
         
         return l;
     }
+    
+    /**
+     *
+     * @param s
+     * @return 
+     * @throws game.application.exceptions.NonLookableException 
+     * @throws game.application.exceptions.NonExistantLookableException 
+     */
+    public Lookable lookInBag(String s) throws NonLookableException, NonExistantLookableException {
+        return null;
+    }
 
     /**
      * 
@@ -98,8 +121,7 @@ public class Game {
      * @param item
      */
     public void use(String item) {
-            // TODO - implement Game.use
-            throw new UnsupportedOperationException();
+        
     }
 
     /**

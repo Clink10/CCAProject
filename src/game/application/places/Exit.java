@@ -1,5 +1,6 @@
-package game.application;
+package game.application.places;
 
+import game.application.character.Character;
 import game.application.exceptions.LockedExitException;
 
 public class Exit {

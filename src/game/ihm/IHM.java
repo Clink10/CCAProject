@@ -6,7 +6,7 @@ import game.application.exceptions.InvalidCommandException;
 import game.application.Lookable;
 import game.application.exceptions.LockedExitException;
 import game.application.exceptions.NonExistantPlaceException;
-import game.application.Place;
+import game.application.places.Place;
 import game.application.exceptions.NonExistantLookableException;
 import game.application.exceptions.NonLookableException;
 import java.util.Scanner;
@@ -80,7 +80,7 @@ public class IHM {
         //LOOK
         else if(c.equals(Command.LOOK) && tabParameters.length > 1) {     
             try {
-                Lookable l = this.game.look(tabParameters[1]);
+                Lookable l = this.game.lookInPlace(tabParameters[1]);
                 this.refreshConsole(l.look());
             } catch (NonLookableException ex) {
                 this.refreshConsole(this.game.getHeroPlace().toString()

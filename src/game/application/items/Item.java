@@ -1,4 +1,6 @@
-package game.application;
+package game.application.items;
+
+import game.application.Lookable;
 
 public class Item implements Lookable{
 

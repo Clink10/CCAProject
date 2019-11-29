@@ -9,9 +9,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.typeadapters.RuntimeTypeAdapterFactory;
-import game.application.Hero;
-import game.application.Character;
-import game.application.Place;
+import game.application.character.Hero;
+import game.application.character.Character;
+import game.application.places.Place;
 import java.util.List;
 
 /**
@@ -88,6 +88,9 @@ public class Stockage {
                                         +"\"EXITS\": {"
                                                     + "\"test\":{"
                                                            +"\"DESCRIPTION\": \"testExit\""
+                                                    + "},"
+                                                    + "\"sortie\":{"
+                                                           +"\"DESCRIPTION\": \"testExit\""
                                                     + "}"
                                                   +"},"
                                         +"\"ITEMS\": ["
@@ -100,6 +103,25 @@ public class Stockage {
                                                                +"\"DESCRIPTION\": \"blabla4\""
                                                         + "}"
                                                        +"]"
+                                    + "},"
+                                    + "{"
+                                        +"\"NAME\": \"sortie\","
+                                        +"\"DESCRIPTION\": \"Congratulation, you finished the game ! You can quit now.\","
+                                        +"\"CHARACTERS\": ["
+                                                       +"],"
+                                        +"\"EXITS\": {"
+                                            
+                                                   +"},"
+                                        +"\"ITEMS\": ["
+                                                        + "{"
+                                                               +"\"NAME\": \"item3\","
+                                                               +"\"DESCRIPTION\": \"blabla3\""
+                                                        + "},"
+                                                        + "{"
+                                                               +"\"NAME\": \"item4\","
+                                                               +"\"DESCRIPTION\": \"blabla4\""
+                                                        + "}"
+                                                    +"]"
                                     + "}"
                                   + "]", new TypeToken<List<Place>>(){}.getType());
         return lp;

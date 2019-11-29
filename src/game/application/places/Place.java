@@ -1,5 +1,7 @@
-package game.application;
+package game.application.places;
 
+import game.application.items.Item;
+import game.application.character.Character;
 import java.util.*;
 
 public class Place {
